@@ -22,9 +22,10 @@ var clicksCounter = 0;
 window.onload = function() {
     elem = document.getElementById("wrapper");
     elem.addEventListener("mousemove", mouseMove);
-    elem.addEventListener("click", addClick);
+    elem.addEventListener("click", removeClick);
 
     circle = document.getElementById("circle");
+    circle.addEventListener("click", addClick);
 
     // setTimeout(function() {
     //     return alert("GAME OVER! Result: " + clicksCounter);
@@ -32,15 +33,16 @@ window.onload = function() {
 }
 
 function addClick() {
-    if ((cursorX > circleLeft &&  cursorX < circleRight) && (cursorY > circleTop && cursorY < circleBottom)) {
-        return clicksCounter++;
-    } else {
-        if (clicksCounter < 1 ) {
-            return;
-        } else {
-            clicksCounter--;
-        }
+    debugger
+    event.stopPropagation()
+    return clicksCounter++;
+}
+
+function removeClick() {
+    if (clicksCounter == 0) {
+        return;
     }
+    return clicksCounter--;
 }
 
 function mouseMove() {

@@ -35,12 +35,9 @@ function addClick() {
     if ((cursorX > circleLeft &&  cursorX < circleRight) && (cursorY > circleTop && cursorY < circleBottom)) {
         return clicksCounter++;
     } else {
-        if (clicksCounter < 1 ) {
-            return;
-        } else {
-            clicksCounter--;
-        }
+        clicksCounter--;
     }
+    return clicksCounter++;
 }
 
 function mouseMove() {
@@ -72,10 +69,10 @@ function mouseMove() {
     pointX = getRandomPoint(0, elem.clientWidth + 1);
     pointY = getRandomPoint(0, elem.clientHeight + 1);
 
-    if ((cursorX > fieldLeft &&  cursorX < fieldRight) && (cursorY > fieldTop && cursorY < fieldBottom)) {
-        circle.style.top = pointY + "px";
-        circle.style.left = pointX + "px";
-    }
+    // if ((cursorX > fieldLeft &&  cursorX < fieldRight) && (cursorY > fieldTop && cursorY < fieldBottom)) {
+    //     circle.style.top = pointY + "px";
+    //     circle.style.left = pointX + "px";
+    // }
 
     document.getElementById('x').innerHTML="cursor x: " + cursorX;
     document.getElementById('y').innerHTML="cursor y: " + cursorY;

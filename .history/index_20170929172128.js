@@ -22,25 +22,26 @@ var clicksCounter = 0;
 window.onload = function() {
     elem = document.getElementById("wrapper");
     elem.addEventListener("mousemove", mouseMove);
-    elem.addEventListener("click", addClick);
+    elem.addEventListener("click", removeClick);
 
     circle = document.getElementById("circle");
+    circle.addEventListener("click", addClick);
 
-    // setTimeout(function() {
-    //     return alert("GAME OVER! Result: " + clicksCounter);
-    // }, 60000);
+    setTimeout(function() {
+        return alert("GAME OVER! Result: " + clicksCounter);
+    }, 60000);
 }
 
 function addClick() {
-    if ((cursorX > circleLeft &&  cursorX < circleRight) && (cursorY > circleTop && cursorY < circleBottom)) {
-        return clicksCounter++;
-    } else {
-        if (clicksCounter < 1 ) {
-            return;
-        } else {
-            clicksCounter--;
-        }
+    event.stopPropagation()
+    return clicksCounter++;
+}
+
+function removeClick() {
+    if (clicksCounter == 0) {
+        return;
     }
+    return clicksCounter--;
 }
 
 function mouseMove() {
@@ -72,10 +73,10 @@ function mouseMove() {
     pointX = getRandomPoint(0, elem.clientWidth + 1);
     pointY = getRandomPoint(0, elem.clientHeight + 1);
 
-    if ((cursorX > fieldLeft &&  cursorX < fieldRight) && (cursorY > fieldTop && cursorY < fieldBottom)) {
-        circle.style.top = pointY + "px";
-        circle.style.left = pointX + "px";
-    }
+    // if ((cursorX > fieldLeft &&  cursorX < fieldRight) && (cursorY > fieldTop && cursorY < fieldBottom)) {
+    //     circle.style.top = pointY + "px";
+    //     circle.style.left = pointX + "px";
+    // }
 
     document.getElementById('x').innerHTML="cursor x: " + cursorX;
     document.getElementById('y').innerHTML="cursor y: " + cursorY;

@@ -35,7 +35,7 @@ function addClick() {
     if ((cursorX > circleLeft &&  cursorX < circleRight) && (cursorY > circleTop && cursorY < circleBottom)) {
         return clicksCounter++;
     } else {
-        if (clicksCounter < 1 ) {
+        if (clicksCounter < 0 ) {
             return;
         } else {
             clicksCounter--;

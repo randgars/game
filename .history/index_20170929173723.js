@@ -32,14 +32,11 @@ window.onload = function() {
 }
 
 function addClick() {
+    debugger
     if ((cursorX > circleLeft &&  cursorX < circleRight) && (cursorY > circleTop && cursorY < circleBottom)) {
         return clicksCounter++;
     } else {
-        if (clicksCounter < 1 ) {
-            return;
-        } else {
-            clicksCounter--;
-        }
+        clicksCounter--;
     }
 }
 
