@@ -1,0 +1,125 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.square {
+    height: 200px;
+    width: 200px;
+    background-color: rgba(35, 255, 35, 1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+}
+.first {
+    animation-name: first;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.second {
+    animation-name: second;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.third {
+    animation-name: third;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.fourth {
+    animation-name: fourth;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.first:hover, second:hover, third:hover, fourth:hoer {
+    animation-play-state: paused;
+}
+
+@keyframes first {
+    from {
+        transform: rotate(0deg);
+    }
+    25% {
+        background-color: rgba(35, 35, 255, 1);
+    }
+    50% {
+        top: calc(25% - 100px);
+        left: calc(25% - 100px);
+        background-color: rgb(255, 35, 35);
+    }
+    75% {
+        background-color: rgba(255, 255, 35, 1);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes second {
+    from {
+        transform: rotate(0deg);
+    }
+    25% {
+        background-color: rgba(35, 35, 255, 1);
+    }
+    50% {
+        top: calc(25% - 100px);
+        left: calc(75% - 100px);
+        transform: scale(0.5);
+        background-color: rgb(255, 35, 35);
+    }
+    75% {
+        background-color: rgba(255, 255, 35, 1);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes third {
+    from {
+        transform: rotate(0deg);
+    }
+    25% {
+        background-color: rgba(35, 35, 255, 1);
+    }
+    50% {
+        top: calc(75% - 100px);
+        left: calc(75% - 100px);
+        transform: scale(0.5);
+        background-color: rgb(255, 35, 35);
+    }
+    75% {
+        background-color: rgba(255, 255, 35, 1);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes fourth {
+    from {
+        transform: rotate(0deg);
+    }
+    25% {
+        background-color: rgba(35, 35, 255, 1);
+    }
+    50% {
+        top: calc(75% - 100px);
+        left: calc(25% - 100px);
+        transform: scale(0.5);
+        background-color: rgb(255, 35, 35);
+    }
+    75% {
+        background-color: rgba(255, 255, 35, 1);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

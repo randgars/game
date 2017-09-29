@@ -1,0 +1,83 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.square {
+    height: 200px;
+    width: 200px;
+    background-color: rgba(35, 255, 35, 1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+}
+.first {
+
+}
+.second {
+    
+}
+.third {
+    
+}
+.fourth {
+    
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    25% {
+        background-color: rgba(35, 35, 255, 1);
+    }
+    50% {
+        background-color: rgba(255, 35, 35, 1);
+    }
+    75% {
+        background-color: rgba(255, 255, 35, 1);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes first {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes second {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes third {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes fourth {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

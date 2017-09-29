@@ -1,0 +1,9 @@
+body {
+    padding: 50px;
+    margin: 0;
+}
+.square {
+    height: 200px;
+    width: 200px;
+    background-color: rgba(35, 35, 35, 1);
+}

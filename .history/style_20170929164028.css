@@ -1,0 +1,161 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+.wrapper {
+    position: relative;
+    width: 600px;
+    height: 600px;
+}
+.square {
+    height: 100px;
+    width: 100px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .4);
+    position: absolute;
+}
+.first {
+    animation-name: first;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-color: rgba(35, 255, 35, 1);
+    top: calc(0% - 50px);
+    left: calc(0% - 50px);
+}
+.second {
+    animation-name: second;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-color: rgba(35, 35, 255, 1);
+    top: calc(0% - 50px);
+    left: calc(100% - 50px);
+}
+.third {
+    animation-name: third;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-color: rgb(255, 35, 35);
+    top: calc(100% - 50px);
+    left: calc(100% - 50px);
+}
+.fourth {
+    animation-name: fourth;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-color: rgba(255, 255, 35, 1);
+    top: calc(100% - 50px);
+    left: calc(0% - 50px);
+}
+
+.first:hover, .second:hover, .third:hover, .fourth:hoer {
+    animation-play-state: paused;
+}
+
+@keyframes first {
+    from {
+        transform: rotate(360deg);
+    }
+    25% {
+        background-color: rgba(35, 35, 255, 1);
+    }
+    50% {
+        top: calc(100% - 50px);
+        left: calc(100% - 50px);
+        background-color: rgb(255, 35, 35);
+    }
+    75% {
+        background-color: rgba(255, 255, 35, 1);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+@keyframes second {
+    from {
+        transform: rotate(0deg);
+    }
+    25% {
+        background-color: rgb(255, 35, 35);
+    }
+    50% {
+        top: calc(100% - 50px);
+        left: calc(0% - 50px);
+        background-color: rgba(255, 255, 35, 1);
+    }
+    75% {
+        background-color: rgba(35, 255, 35, 1);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes third {
+    from {
+        transform: rotate(360deg);
+    }
+    25% {
+        background-color: rgba(255, 255, 35, 1);
+    }
+    50% {
+        top: calc(0% - 50px);
+        left: calc(0% - 50px);
+        background-color: rgba(35, 255, 35, 1);
+    }
+    75% {
+        background-color: rgba(35, 35, 255, 1);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+@keyframes fourth {
+    from {
+        transform: rotate(0deg);
+    }
+    25% {
+        background-color: rgba(35, 255, 35, 1);
+    }
+    50% {
+        top: calc(0% - 50px);
+        left: calc(100% - 50px);
+        background-color: rgba(35, 35, 255, 1);
+    }
+    75% {
+        background-color: rgb(255, 35, 35);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#wrapper {
+    border: solid 1px red;
+}
+
+.circle {
+    border-radius: 100%;
+    background-color: rgb(255, 35, 35);
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 50px;
+    transition: left 0.5s, top 0.4s;
+}
+.circle:hover {
+    cursor: pointer;
+}
+.coordinates {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 50px;
+    top: 50px;
+}

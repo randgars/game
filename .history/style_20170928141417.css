@@ -1,0 +1,13 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+.test {
+    height: 90vh;
+    overflow-y: scroll;
+}
+.div {
+    width: 800px;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
